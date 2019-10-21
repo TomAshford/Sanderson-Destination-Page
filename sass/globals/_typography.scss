@@ -1,0 +1,66 @@
+h1 {
+	font-family:$lato;
+	font-weight:700;
+	@include fontSizer(48,54);
+	text-transform:uppercase;
+	@media(max-width:$sm) {
+		@include fontSizer(34, 40);
+	}
+}
+h2 {
+	font-family:$lato;
+	font-weight:700;
+	@include fontSizer(36,auto);
+	text-transform:uppercase;
+	@media(max-width:$sm) {
+		@include fontSizer(28, auto);
+	}
+}
+h3 {
+	font-family:$lato;
+	font-weight:700;
+	@include fontSizer(24,auto);
+	@media(max-width:$sm) {
+		@include fontSizer(20,auto);
+	}
+}
+.csQuote__header h3 {
+	font-family:$lato;
+	font-weight:700;
+	@include fontSizer(30,auto);
+	@media(max-width:$sm) {
+		@include fontSizer(24,auto);
+	}
+}
+p {
+	font-family:$lato;
+	font-weight:500;
+	@include fontSizer(18,24);
+	@media(max-width:$sm) {
+		@include fontSizer(16,auto);
+	}
+}
+li {
+	font-family:$lato;
+	font-weight:400;
+	@include fontSizer(18,24);
+	@media(max-width:$sm) {
+		@include fontSizer(16,auto);
+	}
+}
+blockquote {
+	font-family:$lato;
+	font-weight:400;
+	@include fontSizer(30,auto);
+	@media(max-width:$sm) {
+		@include fontSizer(24,auto);
+	}
+}
+.hero__subheader {
+	font-family:$lato;
+	font-weight:700;
+	@include fontSizer(24,32);
+	@media(max-width:$sm) {
+		@include fontSizer(20,auto);
+	}
+}

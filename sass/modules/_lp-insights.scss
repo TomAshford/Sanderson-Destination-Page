@@ -1,0 +1,109 @@
+.insights {
+	&__container {
+		padding-top:55px;
+		padding-bottom:110px;
+	}
+	&__header {
+		padding-bottom:49px;
+		margin-bottom:50px;
+		position:relative;
+		text-align:center;
+		&:after {
+			content:'';
+			position:absolute;
+			width:66px;
+			height:1px;
+			background:$red;
+			left:50%;
+			bottom:0;
+			transform:translateX(-50%);
+		}
+		h2 {
+			margin:0 auto;
+			color:$text;
+			max-width:980px;
+		}
+	}
+	&__list {
+		display:flex;
+		flex-flow:row wrap;
+		justify-content:space-between;
+		@media(max-width:$md) {
+			justify-content:center;
+		}
+		.insights__item {
+			flex:0 0 30%;
+			position:relative;
+			display:flex;
+			@media(max-width:$md) {
+				flex:0 0 100%;
+				margin-bottom:45px;
+				justify-content:center;
+			}
+			&:hover {
+				.insights__itemInner {
+					box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.14);
+				}
+			}
+			.insights__itemInner {
+				width:100%;
+				height:100%;
+				overflow:hidden;
+				border-radius: 6px;
+				transition:all 0.25s ease;
+				box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.07);
+				@media(max-width:$md) {
+					max-width:480px;
+				}
+			}
+			.insights {
+				&__link {
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+				}
+				&__image {
+					height:173px;
+					background-repeat:no-repeat;
+					background-size:cover;
+					background-position:50%;
+				}
+				&__text {
+					background:$white;
+					padding:40px 30px 45px;
+					text-align:center;
+					border-bottom:8px solid $red;
+					h3 {
+						@include fontSizer(24, auto);
+						margin:0 0 50px;
+					}
+				}
+				&__textLink {
+					display:inline-block;
+					@include fontSizer(18,22);
+					color:$red;
+					font-weight:700;
+					text-transform:uppercase;
+					text-decoration:none;
+					position:relative;
+					transition:all 0.25s ease;
+					padding-right:1em;
+					&:after {
+						transition: all 0.25s ease;
+						content: '';
+					    position: absolute;
+					    top:50%;
+					    right:0;
+					    width:8px;
+					    height:8px;
+					    transform:translateY(-50%) rotate(-45deg);
+					    border-right:2px solid $red;
+						border-bottom:2px solid $red;
+					}
+				}
+			}
+		}
+	}
+}

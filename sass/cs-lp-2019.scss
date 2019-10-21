@@ -1,0 +1,52 @@
+@import "globals/fonts";
+@import "globals/brand";
+@import "globals/base";
+@import "globals/typography";
+
+@import "modules/lp-scrollbutton";
+@import "modules/lp-cs-hero";
+@import "modules/lp-csQuotes";
+@import "modules/lp-cs-cta";
+@import "modules/lp-cs-footer";
+@import "modules/typ";
+
+
+.body-bg {
+	background-repeat:no-repeat;
+	background-position:50% 100%;
+	background-size: contain;
+}
+.fadeIn {
+  left: -15px;
+  opacity: 0;
+  position:relative;
+}
+
+.fadeIn.showing {
+  animation-name: fadeIn;
+  animation-duration: 0.75s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    left: -15px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    left: -15px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
